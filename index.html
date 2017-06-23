@@ -33,7 +33,7 @@
                     <div class="modal-content">
                         <!--login part-->
                         <div class="login-card">
-                            <form action="user.php">
+                            <form action="#">
                                 <!--head-->
                                 <div class="pmd-card-title card-header-border text-center">
                                     <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
@@ -295,11 +295,11 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 wow fadeInDown" data-wow-delay=".5s">
-                                <h3>Need ASO Services?</h3>
+                                <h3 style="text-align: left;">Need ASO Services?</h3>
                             </div>
                             <div class="col-md-2"></div>
                             <div class="col-md-8 wow fadeInUp" data-wow-delay=".5s">
-                                <p>Contact us to optimize your app. You will get reply within hours.</p>
+                                <!--<p>Contact us to optimize your app. You will get reply within hours.</p>-->
                             </div>
                             <div class="col-md-2"></div>
                             <form action="#" method="post">
@@ -319,8 +319,8 @@
                                         <textarea name="message" id="message" placeholder="Message" class="form-control"></textarea>
                                     </div>
                                 </div>
-                                <div class="col-md-3 col-xs-1"></div>
-                                <div class="col-md-6 col-xs-10  wow fadeInUp" data-wow-delay="1s">
+                                <div class="col-md-5 col-xs-1"></div>
+                                <div class="col-md-4 col-xs-10  wow fadeInUp" data-wow-delay="1s">
                                     <input type="submit" value="Submit" class="form-control">
                                 </div>
                                 <div class="col-md-3 col-xs-1"></div>
@@ -390,10 +390,12 @@
                     speedIn: 300,
                     easingIn: mina.easeinout
                 });
-            setTimeout(function() {
-                loader.hide();
-                classie.addClass(pages[currentPage], 'show');
-            }, 1500)
+            $(window).load(function() {
+                setTimeout(function() {
+                    loader.hide();
+                    classie.addClass(pages[currentPage], 'show');
+                }, 1500);
+            });
         });
     </script>
 </body>
