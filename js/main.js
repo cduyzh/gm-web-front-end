@@ -2,6 +2,7 @@ $(document).ready(function() {
     var MainEmail = $('#MainEmail').val();
     var dataOrder = $(".data-order").data("to");
     var dataBalance = $(".data-balance").data("to");
+    var fd = layer.load(2, { time: 30 * 1000 });
     // 客户基本信息
     $.ajax({
         type: post,
@@ -128,7 +129,7 @@ $(document).ready(function() {
             data: {
                 email: email,
                 password: pass,
-                verifyCode: verifycode
+                // verifyCode: verifycode
             },
             success: function(data) {
                 layer.close(fd);
@@ -200,22 +201,7 @@ $(document).ready(function() {
             })
         }
 
-        var fd = layer.load(2, { time: 10 * 1000 });
-        $.ajax({
-            type: post,
-            url: "../user.php?method=changePWD",
-            data: { email: email, lastPWD: oldpwd, newPWD: newpwd },
-            success: function(data) {
-                layer.close(fd);
-                if (data == 1) {
-                    layer.msg("Success");
-                } else if (data == 0) {
-                    layer.msg("Error");
-                } else {
-                    layer.msg('result: ' + data);
-                }
-            }
-        })
+
 
     });
 
@@ -228,9 +214,9 @@ $(document).ready(function() {
         country = $.trim($('#orderCountry').val());
         keyword = $.trim($('#orderKeyword').val());
         buy_mount = $.trim($('#ordersum').val());
-        //  orderRace = $.trim($('#orderRace').val());
+        orderRace = $.trim($('#orderRace').val());
         orderCoupon = $.trim($('#orderCoupon').val());
-        // totalPay = $.trim($('#orderPrice').val());
+        totalPay = $.trim($('#orderPrice').val());
         orderPayment = $("input[name=demo-radio]:checked").val();
         // alert(paymentcheck);
         // return;
@@ -238,13 +224,13 @@ $(document).ready(function() {
             type: post,
             url: "../user.php?method=addOrder",
             data: {
-                email: appLink,
-                lastPWD: geo,
-                newPWD: email.
-                email: keyword,
-                lastPWD: taskType,
-                newPWD: totalnum,
-                newPWD: payType
+                appLink: appUrl,
+                geo: country,
+                email: MainEmail,
+                keyword: keyword,
+                taskType: appType,
+                totalnum: buy_mount,
+                payType: orderPayment
             },
             success: function(data) {
                 layer.close(fd);
@@ -369,6 +355,26 @@ $(document).ready(function() {
 
 
         }
+        var fd = layer.load(2, { time: 10 * 1000 });
+        $.ajax({
+            type: post,
+            url: "../user.php?method=changePWD",
+            data: { email: email, lastPWD: oldpwd, newPWD: newpwd },
+            success: function(data) {
+                layer.close(fd);
+                if (data == 1) {
+                    layer.msg("Success");
+                } else if (data == 0) {
+                    layer.msg("Falied");
+                } else if (data == -1) {
+                    layer.msg("Error");
+                } else if (data == -2) {
+                    layer.msg("Insufficient Balance!");
+                } else {
+                    layer.msg('result: ' + data);
+                }
+            }
+        })
 
 
     });
