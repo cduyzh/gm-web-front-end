@@ -106,10 +106,10 @@
                     <li class="dropdown user-profile">
                         <a href="#" data-toggle="dropdown">
                             <i class="fa-user"></i>
-                            <span>
+                            <span id="MainEmail">
 								UserName
-								<i class="fa-angle-down"></i>
-							</span>
+                            </span>
+                            <i class="fa-angle-down"></i>
                         </a>
                         <ul class="dropdown-menu user-profile-menu list-unstyled">
                             <li>
@@ -173,10 +173,10 @@
                             <!-- Regular Input with Floating labels -->
                             <div class="form-group pmd-textfield ">
                                 <div class="col-sm-3">
-                                    <label for="regular1" class="control-label">Regular Input</label>
+                                    <label for="regular1" class="control-label">App Link</label>
                                 </div>
                                 <div class="col-sm-9">
-                                    <input type="text" id="regular1" class="form-control">
+                                    <input type="text" id="orderApplink" class="form-control">
                                 </div>
                             </div>
                             <!--Simple Select with Search-->
@@ -185,7 +185,7 @@
                                     <label for="regular1" class="control-label">Targeted GEO</label>
                                 </div>
                                 <div class="col-sm-9">
-                                    <select class="select-with-search form-control pmd-select2">
+                                    <select id="orderCountry" class="select-with-search form-control pmd-select2">
                                 <option value="USA" selected="selected">USA</option>
                                 <option value="China">China</option>
                                 <option value="Russia">Russia</option>
@@ -207,7 +207,7 @@
                                     <label for="regular1" class="control-label">Keyword</label>
                                 </div>
                                 <div class="col-sm-9">
-                                    <input placeholder="Only one keyword/phrase available" type="text" id="regular1" class="form-control">
+                                    <input id="orderKeyword" placeholder="Only one keyword/phrase available" type="text" id="regular1" class="form-control">
                                     <span class="help-block">For assistance, please contact us.</span>
                                 </div>
                             </div>
@@ -220,7 +220,7 @@
                                         <span class="input-group-btn">
 											<button style="min-width: 48px;" class="btn btn-gray btn-single" data-type="decrement">-</button>
 										</span>
-                                        <input style="height: 46px;" type="text" class="form-control text-center no-left-border" value="300" readonly="">
+                                        <input id="ordersum" style="height: 46px;" type="text" class="form-control text-center no-left-border" value="300" readonly="">
                                         <span class="input-group-btn">
 											<button style="min-width: 48px;" class="btn btn-gray btn-single" data-type="increment">+</button>
 										</span>
@@ -232,7 +232,7 @@
                                     <label for="regular1" class="control-label">Coupon Code</label>
                                 </div>
                                 <div class="col-sm-9">
-                                    <input placeholder="(optional)" type="text" id="regular1" class="form-control">
+                                    <input placeholder="(optional)" type="text" id="orderCoupon" class="form-control">
                                 </div>
                             </div>
                             <!--单选-->
@@ -242,10 +242,10 @@
                                 </div>
                                 <div class="col-sm-9">
                                     <label style="margin-left: 1.1em;margin-right: 1.4em;" class="radio-inline pmd-radio pmd-radio-ripple-effect">
-                                <input  type="radio" name="inlineRadioOptions" checked="1" id="inlineRadio1" value="1"><span class="pmd-radio-label">&nbsp;</span>
+                                <input  type="radio" name="demo-radio" checked="1" id="inlineRadio1" value="1"><span class="pmd-radio-label">&nbsp;</span>
                                 <span for="inlineRadio1">PayPal</span></label>
                                     <label class="radio-inline pmd-radio pmd-radio-ripple-effect">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"><span class="pmd-radio-label">&nbsp;</span>
+                                <input type="radio" name="demo-radio" id="inlineRadio2" value="2"><span class="pmd-radio-label">&nbsp;</span>
                                 <span for="inlineRadio2">Balance</span></label>
                                 </div>
                                 <div class="form-group pmd-textfield ">
@@ -266,7 +266,7 @@
 
                             </div>
                             <div class="col-sm-6">
-                                <button style="color:#fff;background: #6bc5a4;" class="btn pmd-ripple-effect btn-default btn-block" type="button">Sumbit</button>
+                                <button id="orderSubmit" style="color:#fff;background: #6bc5a4;" class="btn pmd-ripple-effect btn-default btn-block" type="button">Submit</button>
                             </div>
                             <div class="col-sm-3">
 

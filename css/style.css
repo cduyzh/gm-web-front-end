@@ -32,7 +32,7 @@
 }
 
 .navbar-brand img {
-    width: 80px;
+    width: 200px;
 }
 
 .navbar-nav a {
@@ -41,7 +41,7 @@
 
 @media (max-width:764px) {
     .navbar-brand img {
-        width: 66px;
+        height: 93%;
     }
     .footer-img img {
         width: 80px;
@@ -63,8 +63,13 @@
 }
 
 @media (min-width:440px) {
+    .navbar-brand img {
+        margin-left: 3em;
+        margin-top: 2px;
+    }
     .fot-left {
         padding-top: 20px;
+        padding-right: 44px;
     }
     .fot-center {
         padding-top: 20px;
@@ -110,7 +115,7 @@ h3 {
 }
 
 .section-heading p {
-    text-indent: 20px;
+    /*text-indent: 20px;*/
     padding: 40px 10px;
     line-height: 34px;
 }
@@ -166,8 +171,9 @@ h3 {
         line-height: 30px;
     }
     .success-case-info p {
-        font-size: 18px;
+        font-size: 21px;
         padding: 0 150px;
+        padding-top: 2rem;
     }
     .success-case-title p {
         font-size: 30px;
@@ -179,6 +185,9 @@ h3 {
     }
     .caseIn-pages h3 {
         font-size: 38px;
+    }
+    .navbar-nav li:nth-last-of-type(2) {
+        padding-left: 19rem;
     }
 }
 
@@ -205,6 +214,9 @@ h3 {
         line-height: 38px;
         padding: 26px 30px;
     }
+    .navbar-nav li:nth-last-of-type(2) {
+        padding-left: 10rem;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -221,6 +233,9 @@ h3 {
         font-size: 14px;
         line-height: 38px;
         padding: 0;
+    }
+    .navbar-nav li:nth-last-of-type(2) {
+        padding-left: 0;
     }
 }
 
@@ -538,7 +553,8 @@ footer a p:hover {
 .success-case {
     background: #304352 url(../images/services-case-bg.jpg) no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
+    
     padding: 128px 20px;
     height: 310px;
     line-height: 38px;
@@ -555,7 +571,7 @@ footer a p:hover {
 .case-info-papge p {
     font-size: 16px;
     padding-top: 38px;
-    text-indent: 20px;
+    /*text-indent: 20px;*/
 }
 .case-div {
     padding-bottom: 2em;
@@ -576,7 +592,8 @@ footer a p:hover {
 
 /*case in 内页*/
 .caseIn-pages p {
-    text-indent: 20px;
+    /*text-indent: 20px;*/
+    
     word-break: break-word;
 }
 .caseIn-pages h3 {
@@ -668,7 +685,7 @@ figure img {
     font-family: 'Lato', sans-serif;
     font-weight: 700;
     letter-spacing: 0.025em;
-    color: #506A85;
+    color: #333;
     margin-top: 0;
 }
 .services-title p {
