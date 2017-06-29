@@ -26,7 +26,7 @@
             <div class="modal-content">
                 <!--login part-->
                 <div class="login-card">
-                    <form action="user.php">
+                    <form action="#">
                         <!--head-->
                         <div class="pmd-card-title card-header-border text-center">
                             <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
@@ -40,7 +40,7 @@
                             <div class="form-group pmd-textfield pmd-textfield-floating-label">
                                 <label for="inputError1" class="control-label pmd-input-group-label">Email</label>
                                 <div class="input-group">
-                                    <div class="input-group-addon"><i class="material-icons md-dark pmd-sm">email</i></div>
+                                    <div class="input-group-addon"><i class="fa fa-envelope fa-2x"></i></div>
                                     <input type="text" class="form-control" id="loginEmail">
                                 </div>
                             </div>
@@ -48,7 +48,7 @@
                             <div class="form-group pmd-textfield pmd-textfield-floating-label">
                                 <label for="inputError1" class="control-label pmd-input-group-label">Password</label>
                                 <div class="input-group">
-                                    <div class="input-group-addon"><i class="material-icons md-dark pmd-sm">lock_outline</i></div>
+                                    <div class="input-group-addon"><i class="fa fa-lock  fa-2x"></i></div>
                                     <input type="password" class="form-control" id="loginpass">
                                 </div>
                             </div>
@@ -57,7 +57,7 @@
                                 <div class="form-group pmd-textfield pmd-textfield-floating-label verification-code-width">
                                     <label for="inputError1" class="control-label pmd-input-group-label">Verification code</label>
                                     <div class="input-group">
-                                        <div class="input-group-addon"><i class="material-icons md-dark pmd-sm">comment</i></div>
+                                        <div class="input-group-addon"><i class="fa fa-sticky-note  fa-2x"></i></div>
                                         <input type="text" class="form-control" id="code_num">
                                     </div>
                                 </div>
@@ -91,28 +91,28 @@
                             <div class="form-group pmd-textfield pmd-textfield-floating-label">
                                 <label for="inputError1" class="control-label pmd-input-group-label">User Name</label>
                                 <div class="input-group">
-                                    <div class="input-group-addon"><i class="material-icons md-dark pmd-sm">perm_identity</i></div>
+                                    <div class="input-group-addon"><i class="fa fa-user-circle-o  fa-2x"></i></div>
                                     <input type="text" class="form-control" name="rscode" id="username">
                                 </div>
                             </div>
                             <div class="form-group pmd-textfield pmd-textfield-floating-label">
                                 <label for="inputError1" class="control-label pmd-input-group-label">Email</label>
                                 <div class="input-group">
-                                    <div class="input-group-addon"><i class="material-icons md-dark pmd-sm">email</i></div>
+                                    <div class="input-group-addon"><i class="fa fa-envelope fa-2x"></i></div>
                                     <input type="text" class="form-control" name="qyname" id="InputEmail1">
                                 </div>
                             </div>
                             <div class="form-group pmd-textfield pmd-textfield-floating-label">
                                 <label for="inputError1" class="control-label pmd-input-group-label">Password</label>
                                 <div class="input-group">
-                                    <div class="input-group-addon"><i class="material-icons md-dark pmd-sm">lock</i></div>
+                                    <div class="input-group-addon"><i class="fa fa-lock fa-2x"></i></div>
                                     <input type="password" class="form-control" name="password" id="InputPassword1">
                                 </div>
                             </div>
                             <div class="form-group pmd-textfield pmd-textfield-floating-label">
                                 <label for="inputError1" class="control-label pmd-input-group-label">Re-type Password</label>
                                 <div class="input-group">
-                                    <div class="input-group-addon"><i class="material-icons md-dark pmd-sm">lock_outline</i></div>
+                                    <div class="input-group-addon"><i class="fa fa-unlock-alt fa-2x"></i></div>
                                     <input type="password" class="form-control" name="confirmPassword" id="InputRetypePassword1">
                                 </div>
                             </div>
@@ -145,13 +145,18 @@
                     <h4 class="modal-title">Forgot Password ?</h4>
                 </div>
                 <div class="modal-body">
-                    <p>Enter your e-mail address to reset your password.</p>
-                    <input name="email" placeholder="Email" id="regetEmail" autocomplete="off" class="form-control placeholder-no-fix" type="text">
-
+                    <p style="color: #9b9898;">Enter your e-mail address to reset your password.</p>
+                    <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                        <label for="inputError1" class="control-label pmd-input-group-label">Email</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-envelope fa-2x md-dark pmd-sm"></i></div>
+                            <input name="email" id="regetEmail" autocomplete="off" class="form-control placeholder-no-fix" type="text">
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
-                    <button class="btn btn-primary forgetpsw" type="button">Submit</button>
+                    <button data-dismiss="modal" class="btn btn-default pmd-ripple-effect" type="button">Cancel</button>
+                    <button style="background: #6bc5a4;" class="btn-primary forgetpsw btn pmd-ripple-effect" type="button">Submit</button>
                 </div>
             </div>
         </div>

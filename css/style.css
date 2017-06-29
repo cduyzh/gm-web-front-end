@@ -105,7 +105,7 @@
 
 @media (min-width:1400px) {
     #home {
-        padding-top: 100px;
+        padding-top: 85px;
     }
 }
 
@@ -120,6 +120,22 @@ h3 {
     line-height: 34px;
 }
 
+@media (min-width: 768px) {
+    .navbar>.container .navbar-brand,
+    .navbar>.container-fluid .navbar-brand {
+        margin-left: -50px;
+    }
+}
+
+
+/*垂直居中*/
+
+.vertical {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 
 /*首页 contact*/
 
@@ -132,12 +148,19 @@ h3 {
     font-size: 36px;
 }
 
+#contact p {
+    padding-left: 15px;
+}
+
 @media (max-width:400px) {
     #code_num {
         width: 150px;
     }
     #verification-code {
         margin-left: 3em;
+    }
+    #home {
+        padding-top: 85px;
     }
 }
 
@@ -154,9 +177,9 @@ h3 {
 }
 
 @media (min-width:992px) {
-    #contact {
+    /*#contact {
         padding-top: 40px;
-    }
+    }*/
     .features-text-wrap {
         margin-top: 5em;
     }
@@ -181,7 +204,7 @@ h3 {
     .caseIn-pages p {
         font-size: 18px;
         line-height: 38px;
-        padding: 26px 30px;
+        padding: 26px 0;
     }
     .caseIn-pages h3 {
         font-size: 38px;
@@ -567,6 +590,7 @@ footer a p:hover {
 .case-info-papge h2 {
     font-size: 26px;
     font-weight: 600;
+    color: #66AF33;
 }
 .case-info-papge p {
     font-size: 16px;
@@ -611,8 +635,8 @@ figure img {
     height: auto;
 }
 .inner {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 70px;
+    padding-bottom: 20px;
 }
 .inner-md {
     padding-top: 100px;
@@ -685,7 +709,7 @@ figure img {
     font-family: 'Lato', sans-serif;
     font-weight: 700;
     letter-spacing: 0.025em;
-    color: #333;
+    color: #66AF33;
     margin-top: 0;
 }
 .services-title p {
