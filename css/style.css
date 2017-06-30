@@ -759,8 +759,8 @@ figure img {
 }
 @media (min-width: 768px) {
     .modal-dialog {
-        width: 500px;
-        margin: 88px auto;
+        width: 460px;
+        margin: 2rem auto;
     }
 }
 .redirection-link {
@@ -796,6 +796,24 @@ figure img {
 body.modal-open {
     overflow-y: auto !important;
     padding-right: 0 !important;
+}
+.pmd-card-title h3 {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+.pmd-card-body {
+    margin-bottom: 0px;
+    margin-top: 12px;
+}
+.redirection-link {
+    margin-top: 18px;
+    margin-bottom: 0px;
+}
+.pmd-card-footer button {
+    padding: 0;
+}
+.form-group.pmd-textfield {
+    margin-bottom: 10px;
 }
 
 /*loading-svg-css*/
