@@ -198,7 +198,7 @@ fieldset[disabled] .radio label {
 .form-group.pmd-textfield {
     margin-bottom: 16px;
     line-height: 22px;
-    height: 46px;
+    /*height: 46px;*/
 }
 
 .pmd-textfield label {
